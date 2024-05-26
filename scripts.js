@@ -52,6 +52,8 @@ prorem1.addEventListener('click' , ()=>{
            price1 -=100;
            proquan1.innerText = quantity1; 
            price.innerText = price1;
+           const olChild = document.getElementById("cart").children;
+           if(olChild.length===0)
            emptycart.style.display = "block";
         }
         else if(quantity1 > 1){
@@ -64,54 +66,56 @@ prorem1.addEventListener('click' , ()=>{
             alert("please enter this product-1");
         }
 })
-proadd1.addEventListener('click' , ()=>{
+proadd2.addEventListener('click' , ()=>{
     
     let span = document.createElement("span");
-    span.setAttribute("id" ,"span2");
-    if(quantity1===0)
+    span.setAttribute("id" ,"span1");
+    if(quantity2===0)
     {
-        quantity1++;
+        quantity2++;
         let li = document.createElement("li");
-        li.setAttribute("id" , "li-1");
-        li.innerText = `Product-1`;
-        span.innerText = `${quantity1} * $100 = $${quantity1*100}`;
+        li.setAttribute("id" , "li-2");
+        li.innerText = `Product-2`;
+        span.innerText = `${quantity2} * $200 = $${quantity2*200}`;
         li.appendChild(span);
         cart.appendChild(li);
-        price1  += 100;
+        price1  += 200;
         price.innerText = price1;
-        proquan1.innerText = quantity1;
+        proquan2.innerText = quantity2;
         emptycart.style.display = "none";
     } 
     else{
-        quantity1++;
-        let span1 =  document.getElementById("span2");
-        span1.innerText = `${quantity1} * $100 = $${quantity1*100}`;
-        price1  += 100;
+        quantity2++;
+        let span2 =  document.getElementById("span1");
+        span2.innerText = `${quantity2} * $200 = $${quantity2*200}`;
+        price1  += 200;
         price.innerText = price1;
-        proquan1.innerText = quantity1;
+        proquan2.innerText = quantity2;
     }
 })
-prorem1.addEventListener('click' , ()=>{
+prorem2.addEventListener('click' , ()=>{
     
-       let span1 =  document.getElementById("span2");
-       if(quantity1 === 1)
+       let span1 =  document.getElementById("span1");
+       if(quantity2 === 1)
         {
-           quantity1--;
-           li1 = document.getElementById("li-1");
+           quantity2--;
+           li1 = document.getElementById("li-2");
            li1.remove();
-           price1 -=100;
-           proquan1.innerText = quantity1; 
+           price1 -=200;
+           proquan2.innerText = quantity1; 
            price.innerText = price1;
+           const olChild = document.getElementById("cart").children;
+           if(olChild.length===0)
            emptycart.style.display = "block";
         }
-        else if(quantity1 > 1){
-            quantity1--;
-            price1 -=100;
-            proquan1.innerText = quantity1; 
+        else if(quantity2 > 1){
+            quantity2--;
+            price1 -=200;
+            proquan2.innerText = quantity2; 
             price.innerText = price1;
         }
         else{
-            alert("please enter this product-1");
+            alert("please enter this product-2");
         }
 })
 proadd3.addEventListener('click' , ()=>{
@@ -124,12 +128,12 @@ proadd3.addEventListener('click' , ()=>{
         let li = document.createElement("li");
         li.setAttribute("id" , "li-3");
         li.innerText = `Product-3`;
-        span.innerText = `${quantity3} * $100 = $${quantity3*100}`;
+        span.innerText = `${quantity3} * $300 = $${quantity3*100}`;
         li.appendChild(span);
         cart.appendChild(li);
         price1  += 300;
         price.innerText = price1;
-        proquan1.innerText = quantity3;
+        proquan3.innerText = quantity3;
         emptycart.style.display = "none";
     } 
     else{
@@ -143,24 +147,26 @@ proadd3.addEventListener('click' , ()=>{
 })
 prorem3.addEventListener('click' , ()=>{
     
-       let span1 =  document.getElementById("span2");
+       let span1 =  document.getElementById("span3");
        if(quantity3 === 1)
         {
            quantity3--;
-           li1 = document.getElementById("li-1");
-           li1.remove();
-           price1 -=100;
-           proquan1.innerText = quantity1; 
+           li3 = document.getElementById("li-3");
+           li3.remove();
+           price1 -=300;
+           proquan3.innerText = quantity3; 
            price.innerText = price1;
+           const olChild = document.getElementById("cart").children;
+           if(olChild.length===0)
            emptycart.style.display = "block";
         }
-        else if(quantity1 > 1){
-            quantity1--;
-            price1 -=100;
-            proquan1.innerText = quantity1; 
+        else if(quantity3 >= 1){
+            quantity3--;
+            price1 -=300;
+            proquan3.innerText = quantity3; 
             price.innerText = price1;
         }
         else{
-            alert("please enter this product-1");
+            alert("please enter this product-3");
         }
 })
