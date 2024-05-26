@@ -163,7 +163,7 @@ prorem3.addEventListener('click' , ()=>{
            const olChild = document.getElementById("cart").children;
            if(olChild.length===0)
            emptycart.style.display = "block";
-           span1.innerText = `${quantity3} * $300 = $${quantity3*100}`;
+           span1.innerText = `${quantity3} * $300 = $${quantity3*300}`;
         }
         else if(quantity3 >= 1){
             quantity3--;
