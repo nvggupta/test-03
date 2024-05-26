@@ -55,12 +55,14 @@ prorem1.addEventListener('click' , ()=>{
            const olChild = document.getElementById("cart").children;
            if(olChild.length===0)
            emptycart.style.display = "block";
+           span1.innerText = `${quantity1} * $100 = $${quantity1*100}`;
         }
         else if(quantity1 > 1){
             quantity1--;
             price1 -=100;
             proquan1.innerText = quantity1; 
             price.innerText = price1;
+            span1.innerText = `${quantity1} * $100 = $${quantity1*100}`;
         }
         else{
             alert("please enter this product-1");
@@ -76,7 +78,7 @@ proadd2.addEventListener('click' , ()=>{
         let li = document.createElement("li");
         li.setAttribute("id" , "li-2");
         li.innerText = `Product-2`;
-        span.innerText = `${quantity2} * $200 = $${quantity2*200}`;
+        span.innerText = `${quantity3} * $300 = $${quantity3*100}`;
         li.appendChild(span);
         cart.appendChild(li);
         price1  += 200;
@@ -107,12 +109,14 @@ prorem2.addEventListener('click' , ()=>{
            const olChild = document.getElementById("cart").children;
            if(olChild.length===0)
            emptycart.style.display = "block";
+           span1.innerText = `${quantity2} * $300 = $${quantity2*100}`;
         }
         else if(quantity2 > 1){
             quantity2--;
             price1 -=200;
             proquan2.innerText = quantity2; 
             price.innerText = price1;
+            span1.innerText = `${quantity2} * $300 = $${quantity2*100}`;
         }
         else{
             alert("please enter this product-2");
@@ -159,12 +163,14 @@ prorem3.addEventListener('click' , ()=>{
            const olChild = document.getElementById("cart").children;
            if(olChild.length===0)
            emptycart.style.display = "block";
+           span1.innerText = `${quantity3} * $300 = $${quantity3*100}`;
         }
         else if(quantity3 >= 1){
             quantity3--;
             price1 -=300;
             proquan3.innerText = quantity3; 
             price.innerText = price1;
+            span1.innerText = `${quantity3} * $300 = $${quantity3*100}`;
         }
         else{
             alert("please enter this product-3");
