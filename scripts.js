@@ -132,7 +132,7 @@ proadd3.addEventListener('click' , ()=>{
         let li = document.createElement("li");
         li.setAttribute("id" , "li-3");
         li.innerText = `Product-3`;
-        span.innerText = `${quantity3} * $300 = $${quantity3*100}`;
+        span.innerText = `${quantity3} * $300 = $${quantity3*300}`;
         li.appendChild(span);
         cart.appendChild(li);
         price1  += 300;
